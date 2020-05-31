@@ -1,23 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="./Question.css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width = device-width , initial-scale=1 , shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><p></p>
+<p></p>
+<h1 class="text-center mb-4 mt-4">Solution</h1>
+<div class="jumbotron">
+<div class="container">Java program to find occurrence of a character in a String:<br />
+<div class="row"></div>
+<div class="row card mt-4">
+<div class="card-header"><span>CODE</span></div>
+<div class="card-body "><textarea readonly="readonly" id="solution"> class JavaExample {  
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solution</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+   static void countEachChar(String str) 
+   { 
+	//ASCII values ranges upto 256
+	int counter[] = new int[256]; 
 
-</head>
+	//String length
+	int len = str.length(); 
 
-<body class="jumbotron">
-    <div class="container" style="text-align: center;">
-        <h2>Solution</h2>
-        <img style="width: 100%; margin-top: 30px;" src="./assests/i7.png" alt="">
-    </div>
+	/* This array holds the occurrence of each char, For example
+	 * ASCII value of A is 65 so if A is found twice then 
+	 * counter[65] would have the value 2, here 65 is the ASCII value
+	 * of A
+	 */
+	for (int i = 0; i < len; i++) 
+		counter[str.charAt(i)]++; 
 
-</body>
+	// We are creating another array with the size of String
+	char array[] = new char[str.length()]; 
+        for (int i = 0; i < len; i++) { 
+	   array[i] = str.charAt(i); 
+	   int flag = 0; 
+	   for (int j = 0; j <= i; j++) { 
 
-</html>
+		/* If a char is found in String then set the flag 
+		 * so that we can print the occurrence
+		 */
+		if (str.charAt(i) == array[j])  
+			flag++;                 
+	   } 
+
+	   if (flag == 1)  
+	      System.out.println("Occurrence of char " + str.charAt(i)
+		 + " in the String is:" + counter[str.charAt(i)]);             
+	} 
+   } 
+   public static void main(String[] args) 
+   {  
+	String str = "beginnersbook"; 
+	countEachChar(str); 
+   } 
+}
+</textarea></div>
+</div>
+</div>
+</div>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    
+    <meta name ="viewport" content="width = device-width , initial-scale=1 , shrink-to-fit=no">
+    <link rel="stylesheet" href="./Question.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+</head>
+	
+<body>
+	<h1 class="text-center mb-4 mt-4">Question 10</h1>
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				As a beginner to the programming, Mishki came to Hackerearth platform, to become a better programmer. She solved some problems and felt very confident. Later being a fan of Hackerearth, she gave a problem to her friends to solve. They will be given a string containing only lower case characters (a-z), and they need to find that by using the characters of the given string, how many times they can print "hackerearth"(without quotes). As they are new to programming world, please help them.<br><br>
+
+				Input Format<br>
+				The first line will consists of one integer N denoting the length of string.<br>
+				Next line will contain the string Str containing only lower case characters.<br><br>
+
+				Output Format<br>
+				Print one integer, denoting the number of times her friends can print "hackerearth" (without quotes).<br><br>
+
+				Constraints<br>
+				
+				1 &le; N &le; 10⁶<br><br>
+			</div>
+		
+		<div class="row card ">
+			<div class="card-header">
+				<span>SAMPLE INPUT</span>
+			</div>
+			<div class="card-body">
+				<span>13<br>
+aahkcreeatrha</span>
+			</div> 
+		</div>
+		<div class="row card mt-4">
+			<div class="card-header">
+				<span>SAMPLE OUTPUT</span>
+			</div>
+			
+			<div class="card-body ">
+				<span>1</span>
+			</div> 
+		</div>
+		<div class="row card mt-4">
+			<div class="card-header">
+				<span>CODE</span>
+			</div>
+			
+			<div class="card-body ">
+				
+				<textarea readonly id="solution">length = int(input())
+data = str(input())
+count = 0
+ 
+word = "hackerearth"
+ 
+h = data.count("h") #twice
+a = data.count("a") #twice
+c = data.count("c")
+k = data.count("k")
+e = data.count("e") #twice
+r = data.count("r") #twice
+t = data.count("t")
+ 
+while (1):
+    if ((h==0)or(a==0)or(c==0)or(k==0)or(e==0)or(r==0)or(t==0)or(h==1)or(a==1)or(e==1)or(r==1)):
+        break
+    h-=2
+    a-=2
+    c-=1
+    k-=1
+    e-=2
+    r-=2
+    t-=1
+    count+=1
+print(count)</textarea>
+			</div> 
+		</div>	 
+		</div>
+		<div class="w3-show-inline-block " style="float: right; margin-top: 20px;">
+            <a type="button" class="btn btn-primary btn-lg my-4" href="./q11.html" role="button">Next</a>
+        </div>
+	</div>
+	
+</body>	
+	
+	
+</html>

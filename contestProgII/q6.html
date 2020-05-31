@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    
+    <meta name ="viewport" content="width = device-width , initial-scale=1 , shrink-to-fit=no">
+    <link rel="stylesheet" href="./Question.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+</head>
+	
+<body>
+	<h1 class="text-center mb-4 mt-4">Question 6</h1>
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				Ankit is in maze. The command center sent him a string which decodes to come out from the maze. He is initially at (0, 0). String contains L, R, U, D denoting left, right, up and down. In each command he will traverse 1 unit distance in the respective direction.<br><br>For example if he is at (2, 0) and the command is L he will go to (1, 0).<br><br>
+
+				Input Format<br>
+				Input contains a single string.<br><br>
+
+				Output Format<br>
+				Print the final point where he came out.<br><br>
+
+				Constraints<br>
+				
+				1 &le; |S| &le; 200<br><br>
+			</div>
+		
+		<div class="row card ">
+			<div class="card-header">
+				<span>SAMPLE INPUT</span>
+			</div>
+			<div class="card-body">
+				<span>LLRDDR</span>
+			</div> 
+		</div>
+		<div class="row card mt-4">
+			<div class="card-header">
+				<span>SAMPLE OUTPUT</span>
+			</div>
+			
+			<div class="card-body ">
+				<span>0 -2</span>
+			</div> 
+		</div>
+		<div class="row card mt-4">
+			<div class="card-header">
+				<span>CODE</span>
+			</div>
+			
+			<div class="card-body ">
+				
+				<textarea readonly id="solution">s=input()
+a=0
+b=0
+for i in s:
+    if i=='L':
+        a-=1
+    if i=='R':
+        a+=1
+    if i=='U':
+        b+=1    
+    if i=='D':
+        b-=1
+print(a,b)    </textarea>
+			</div> 
+		</div>	 
+		</div>
+		<div class="w3-show-inline-block " style="float: right; margin-top: 20px;">
+            <a type="button" class="btn btn-primary btn-lg my-4" href="./q7.html" role="button">Next</a>
+        </div>
+	</div>
+	
+</body>	
+	
+	
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="width = device-width , initial-scale=1 , shrink-to-fit=no">
+    <link rel="stylesheet" href="./Question.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="text-center mb-4 mt-4">Question 1</h1>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                You have been given 3 integers - l, r and k. Find how many numbers between l and r (both inclusive) are divisible by k. You do not need to print these numbers, you just have to find their count.<br><br>
+                Input Format<br>
+                The first and only line of input contains 3 space separated integers l, r and k.<br><br>
+                Output Format<br>
+                Print the required answer on a single line.<br><br>
+                Constraints<br>
+                1 &le; l &le; r &le;1000<br>
+                1 &le; k &le; 1000<br><br>
+            </div>
+            <div class="row card ">
+                <div class="card-header">
+                    <span>SAMPLE INPUT</span>
+                </div>
+                <div class="card-body">
+                    <span>1 10 1</span>
+                </div>
+            </div>
+            <div class="row card mt-4">
+                <div class="card-header">
+                    <span>SAMPLE OUTPUT</span>
+                </div>
+                <div class="card-body ">
+                    <span>10</span>
+                </div>
+            </div>
+            <div class="row card mt-4">
+                <div class="card-header">
+                    <span>CODE</span>
+                </div>
+                <div class="card-body ">
+                    <textarea readonly id="solution">import sys
+ 
+S = sys.stdin.read()
+S = S.split()
+S = [int(i) for i in S]
+ 
+l = S[0]
+r = S[1]
+k = S[2]
+ 
+output = 0
+for i in range(l,r+1):
+	if i % k == 0: output += 1
+ 
+print(output)</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="w3-show-inline-block " style="float: right; margin-top: 20px;">
+            <a type="button" class="btn btn-primary btn-lg my-4" href="./q2.html" role="button">Next</a>
+        </div>
+    </div>
+</body>
+
+</html>

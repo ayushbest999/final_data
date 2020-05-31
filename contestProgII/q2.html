@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    
+    <meta name ="viewport" content="width = device-width , initial-scale=1 , shrink-to-fit=no">
+    <link rel="stylesheet" href="./Question.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+</head>
+	
+<body>
+	<h1 class="text-center mb-4 mt-4">Question 2</h1>
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				You have been given a String S. You need to find and print whether this string is a palindrome or not. If yes, print "YES" (without quotes), else print "NO" (without quotes).<br><br>
+
+				Input Format<br>
+				The first and only line of input contains the String S. The String shall consist of lowercase English alphabets only.<br><br>
+
+				Output Format<br>
+				Print the required answer on a single line.<br><br>
+
+				Constraints<br>
+				1 &le; |S| &le;100<br><br>
+			</div>
+		
+		<div class="row card ">
+			<div class="card-header">
+				<span>SAMPLE INPUT</span>
+			</div>
+			<div class="card-body">
+				<span>aba</span>
+			</div> 
+		</div>
+		<div class="row card mt-4">
+			<div class="card-header">
+				<span>SAMPLE OUTPUT</span>
+			</div>
+			
+			<div class="card-body ">
+				<span>YES</span>
+			</div> 
+		</div>
+		<div class="row card mt-4">
+			<div class="card-header">
+				<span>CODE</span>
+			</div>
+			
+			<div class="card-body ">
+				
+				<textarea readonly id="solution">s1 = input()
+li = list(s1)
+li.reverse()
+s2 = "".join(li)
+if s1==s2:
+	print("YES")
+else:
+	print("NO")</textarea>
+			</div> 
+		</div>	 
+		</div>
+		<div class="w3-show-inline-block " style="float: right; margin-top: 20px;">
+            <a type="button" class="btn btn-primary btn-lg my-4" href="./q3.html" role="button">Next</a>
+        </div>
+	</div>
+	
+</body>	
+	
+	
+</html>

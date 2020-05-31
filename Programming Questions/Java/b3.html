@@ -1,23 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="./Question.css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width = device-width , initial-scale=1 , shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><p></p>
+<p></p>
+<h1 class="text-center mb-4 mt-4">Solution</h1>
+<div class="jumbotron">
+<div class="container">Java Program to add two binary numbers:<br />
+<div class="row"></div>
+<div class="row card mt-4">
+<div class="card-header"><span>CODE</span></div>
+<div class="card-body "><textarea readonly="readonly" id="solution">import java.util.Scanner;
+public class JavaExample {
+   public static void main(String[] args)
+   {
+	//Two variables to hold two input binary numbers	 
+	long b1, b2;
+	int i = 0, carry = 0;
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solution</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	//This is to hold the output binary number
+	int[] sum = new int[10];
 
-</head>
+	//To read the input binary numbers entered by user
+	Scanner scanner = new Scanner(System.in);
 
-<body class="jumbotron">
-    <div class="container" style="text-align: center;">
-        <h2>Solution</h2>
-        <img style="width: 100%; margin-top: 30px;" src="./assests/b3.png" alt="">
-    </div>
+	//getting first binary number from user
+	System.out.print("Enter first binary number: ");
+	b1 = scanner.nextLong();
+	//getting second binary number from user
+	System.out.print("Enter second binary number: ");
+	b2 = scanner.nextLong();
 
-</body>
-
-</html>
+	//closing scanner after use to avoid memory leak
+	scanner.close();
+	while (b1 != 0 || b2 != 0) 
+	{
+		sum[i++] = (int)((b1 % 10 + b2 % 10 + carry) % 2);
+		carry = (int)((b1 % 10 + b2 % 10 + carry) / 2);
+		b1 = b1 / 10;
+		b2 = b2 / 10;
+	}
+	if (carry != 0) {
+		sum[i++] = carry;
+	}
+	--i;
+	System.out.print("Output: ");
+	while (i >= 0) {
+		System.out.print(sum[i--]);
+	}
+	System.out.print("\n");  
+   }
+}
+</textarea></div>
+</div>
+</div>
+</div>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    
+    <meta name ="viewport" content="width = device-width , initial-scale=1 , shrink-to-fit=no">
+    <link rel="stylesheet" href="./Question.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+</head>
+	
+<body>
+	<h1 class="text-center mb-4 mt-4">Question 12</h1>
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				Your task is pretty simple , given a string S , find the total count of numbers present in the digit.<br><br>
+
+				Input Format<br>
+				The first line contains T , the number of test cases. The first line of each and every testc ase will contain a integer N , the length of the string . The second line of each and every test case will contain a string S of length N.<br><br>
+
+				Output Format<br>
+				For each and every testcase , output the total count of numbers present in the string.<br><br>
+
+				Constraints<br>
+				1 &le; T &le; 200<br>
+				1 &le; N &le; 10000<br><br>
+			</div>
+		
+		<div class="row card ">
+			<div class="card-header">
+				<span>SAMPLE INPUT</span>
+			</div>
+			<div class="card-body">
+				<span>1<br>
+26<br>
+sadw96aeafae4awdw2wd100awd</span>
+			</div> 
+		</div>
+		<div class="row card mt-4">
+			<div class="card-header">
+				<span>SAMPLE OUTPUT</span>
+			</div>
+			
+			<div class="card-body ">
+				<span>4</span>
+			</div> 
+		</div>
+		<div class="row card mt-4">
+			<div class="card-header">
+				<span>CODE</span>
+			</div>
+			
+			<div class="card-body ">
+				
+				<textarea readonly id="solution">T = int(input())
+for i in range(T):
+	N = int(input())
+	string = input()
+	string = string + "p"
+	count = 0
+	num = []
+	cnt = 0
+	if len(string)-1== N:
+		count = 0
+		num = []
+		cnt = 0
+		for i in range(0,len(string)):
+			if string[i].isdigit():
+				count = count + 1
+			else:
+				if count >= 1:
+					cnt = cnt + 1
+					count = 0
+ 
+		print(cnt)</textarea>
+			</div> 
+		</div>	 
+		</div>
+		<div class="w3-show-inline-block " style="float: right; margin-top: 20px;">
+            <a type="button" class="btn btn-primary btn-lg my-4" href="./q13.html" role="button">Next</a>
+        </div>
+	</div>
+	
+</body>	
+	
+	
+</html>

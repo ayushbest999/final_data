@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    
+    <meta name ="viewport" content="width = device-width , initial-scale=1 , shrink-to-fit=no">
+    <link rel="stylesheet" href="./Question.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+</head>
+	
+<body>
+	<h1 class="text-center mb-4 mt-4">Question 4</h1>
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				You have been given an array A of size N consisting of positive integers. You need to find and print the product of all the number in this array Modulo 10⁹ + 7.<br><br>
+
+				Input Format<br>
+				The first line contains a single integer N denoting the size of the array. The next line contains N space separated integers denoting the elements of the array.<br><br>
+
+				Output Format<br>
+				Print a single integer denoting the product of all the elements of the array Modulo 10⁹ + 7.<br><br>
+
+				Constraints<br>
+				1 &le; N &le;1000<br>
+				1 &le; A[i] &le; 1000<br><br>
+			</div>
+		
+		<div class="row card ">
+			<div class="card-header">
+				<span>SAMPLE INPUT</span>
+			</div>
+			<div class="card-body">
+				<span>5<br>
+1 2 3 4 5</span>
+			</div> 
+		</div>
+		<div class="row card mt-4">
+			<div class="card-header">
+				<span>SAMPLE OUTPUT</span>
+			</div>
+			
+			<div class="card-body ">
+				<span>120</span>
+			</div> 
+		</div>
+		<div class="row card mt-4">
+			<div class="card-header">
+				<span>CODE</span>
+			</div>
+			
+			<div class="card-body ">
+				
+				<textarea readonly id="solution">import sys
+ 
+n = int(input(""))
+value = 1
+list1 = list(map(int,input().split()))
+for i in range(n):
+	value = (value * list1[i]) % (1000000007)
+ 
+print(value)</textarea>
+			</div> 
+		</div>	 
+		</div>
+		<div class="w3-show-inline-block " style="float: right; margin-top: 20px;">
+            <a type="button" class="btn btn-primary btn-lg my-4" href="./q5.html" role="button">Next</a>
+        </div>
+	</div>
+	
+</body>	
+	
+	
+</html>

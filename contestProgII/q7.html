@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    
+    <meta name ="viewport" content="width = device-width , initial-scale=1 , shrink-to-fit=no">
+    <link rel="stylesheet" href="./Question.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+</head>
+	
+<body>
+	<h1 class="text-center mb-4 mt-4">Question 7</h1>
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				Given two strings of equal length, you have to tell whether they both strings are identical.<br><br>
+
+				Two strings S1 and S2 are said to be identical, if any of the permutation of string S1 is equal to the string S2. See Sample explanation for more details.<br><br>
+
+				Input Format<br>
+				<ul>
+					<li>First line, contains an intger 'T' denoting no. of test cases.</li>
+					<li>Each test consists of a single line, containing two space separated strings S1 and S2 of equal length.</li>
+				</ul><br><br>
+
+				Output Format<br>
+				For each test case, if any of the permutation of string S1 is equal to the string S2 print YES else print NO.<br><br>
+
+				Constraints<br>
+				<ul>
+				<li>1 &le; |S1| = |S2| &le;1000<br></li>
+				<li>1 &le; T &le; 100<br></li>
+				<li>String is made up of lower case letters only.</li>	<br>
+				</ul>
+			</div>
+		
+		<div class="row card ">
+			<div class="card-header">
+				<span>SAMPLE INPUT</span>
+			</div>
+			<div class="card-body">
+				<span>3<br>
+sumit mitsu<br>
+ambuj jumba<br>
+abhi hibb</span>
+			</div> 
+		</div>
+		<div class="row card mt-4">
+			<div class="card-header">
+				<span>SAMPLE OUTPUT</span>
+			</div>
+			
+			<div class="card-body ">
+				<span>YES<br>
+YES<br>
+NO<br></span>
+			</div> 
+		</div>
+		<div class="row card mt-4">
+			<div class="card-header">
+				<span>CODE</span>
+			</div>
+			
+			<div class="card-body ">
+				
+				<textarea readonly id="solution">N = int(input())
+for i in range(N):
+    words = [list(i) for i in input().split()]
+    if sorted(words[0]) == sorted(words[1]):
+        print("YES")
+    else:
+        print("NO")</textarea>
+			</div> 
+		</div>	 
+		</div>
+		<div class="w3-show-inline-block " style="float: right; margin-top: 20px;">
+            <a type="button" class="btn btn-primary btn-lg my-4" href="./q8.html" role="button">Next</a>
+        </div>
+	</div>
+	
+</body>	
+	
+	
+</html>

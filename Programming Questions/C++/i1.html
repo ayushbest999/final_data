@@ -1,24 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="./Question.css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width = device-width , initial-scale=1 , shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><p></p>
+<p></p>
+<h1 class="text-center mb-4 mt-4">Solution</h1>
+<div class="jumbotron">
+<div class="container">
+<div class="row">C++ Program to Subtract Complex Number Using Operator Overloading:</div>
+<div class="row"></div>
+<div class="row card mt-4">
+<div class="card-header"><span>CODE</span></div>
+<div class="card-body "><textarea readonly="readonly" id="solution">#include <iostream>
+using namespace std;
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solution</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+class Complex
+{
+    private:
+      float real;
+      float imag;
+    public:
+       Complex(): real(0), imag(0){ }
+       void input()
+       {
+           cout << "Enter real and imaginary parts respectively: ";
+           cin >> real;
+           cin >> imag;
+       }
 
-</head>
+       // Operator overloading
+       Complex operator - (Complex c2)
+       {
+           Complex temp;
+           temp.real = real - c2.real;
+           temp.imag = imag - c2.imag;
 
-<body class="jumbotron">
-    <div class="container" style="text-align: center;">
-        <h2>Solution</h2>
-        <img style="width: 100%; margin-top: 30px;" src="./assests/i1a.png" alt="">
-        <img style="width: 100%; margin-top: 30px;" src="./assests/i1b.png" alt="">
-    </div>
+           return temp;
+       }
 
-</body>
+       void output()
+       {
+           if(imag < 0)
+               cout << "Output Complex number: "<< real << imag << "i";
+           else
+               cout << "Output Complex number: " << real << "+" << imag << "i";
+       }
+};
 
-</html>
+int main()
+{
+    Complex c1, c2, result;
+
+    cout<<"Enter first complex number:\n";
+    c1.input();
+
+    cout<<"Enter second complex number:\n";
+    c2.input();
+
+    // In case of operator overloading of binary operators in C++ programming, 
+    // the object on right hand side of operator is always assumed as argument by compiler.
+    result = c1 - c2;
+    result.output();
+
+    return 0;
+}</textarea></div>
+</div>
+</div>
+</div>
